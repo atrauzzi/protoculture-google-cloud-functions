@@ -1,0 +1,39 @@
+{
+  "name": "protoculture-google-cloud-functions",
+  "author": "Alexander Trauzzi <atrauzzi@gmail.com>",
+  "version": "0.0.0-development",
+  "license": "Apache-2.0",
+  "description": "A slightly opinionated application framework for creating ECMAScript applications.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "build": "tsc",
+    "demo": "ts-node --no-cache ./demo/console.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atrauzzi/protoculture-google-cloud-functions.git"
+  },
+  "keywords": [
+    "typescript",
+    "dependency-injection",
+    "inversify",
+    "google-cloud",
+    "google-cloud-functions",
+    "serverless"
+  ],
+  "bugs": {
+    "url": "https://github.com/atrauzzi/protoculture-google-cloud-functions/issues"
+  },
+  "homepage": "https://github.com/atrauzzi/protoculture-google-cloud-functions#readme",
+  "devDependencies": {
+    "@google-cloud/functions-emulator": "^1.0.0-alpha.20",
+    "semantic-release": "^6.3.2"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "dependencies": {
+    "protoculture": "^2.0.53",
+    "protoculture-hapi": "^1.0.20"
+  }
+}

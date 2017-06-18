@@ -1,0 +1,14 @@
+{
+    "name": "protoculture-google-cloud-functions-demo",
+    "version": "0.0.0-development",
+    "description": "description",
+    "authors": "author",
+    "private": true,
+    "main": "lib/demo/src/Bundle/GoogleCloudFunctionsDemoBundle.js",
+    "scripts": {
+        "serve": "echo 'Not yet!'"
+    },
+    "dependencies": {
+        "protoculture": "^2.0.53"
+    }
+}
