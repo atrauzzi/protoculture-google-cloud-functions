@@ -21,37 +21,5 @@ export class GoogleCloudFunctionsApp implements App {
 
     public async run() {
 
-        // Boot hapi
-    }
-
-    public async dispatch(...args: any[]) {
-
-        if (this.isHttp(args[0], args[1])) {
-
-            await this.dispatchHttp(args[0], args[1]);
-        }
-        else {
-
-            await this.dispatchEvent();
-        }
-    }
-
-    protected async dispatchHttp(request: GoogleFunctionsHttpRequest, response: GoogleFunctionsHttpResponse) {
-
-        await googleFunctionsHttpToHapi(request, response, this.server);
-    }
-
-    protected async dispatchEvent() {
-
-        // !
-    }
-
-    protected isHttp(request: GoogleFunctionsHttpRequest, response: GoogleFunctionsHttpResponse) {
-
-        return (
-            request && response
-            && request.url
-            && response.req
-        );
     }
 }

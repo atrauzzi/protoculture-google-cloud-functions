@@ -19,7 +19,7 @@ export class GoogleCloudFunctionsPlatform implements Platform {
             ...process.env,
             debug: true,
             name: undefined,
-            logLevel: LogLevel.Fatal,
+            logLevel: LogLevel.Error,
         };
     }
 

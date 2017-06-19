@@ -15,12 +15,12 @@ export async function googleFunctionsHttpToHapi(
         payload: googleRequest.body,
     });
 
-    googleResponse.status(hapiResponse.statusCode);
-
     _.forEach(hapiResponse.headers, (value, key) =>
         googleResponse.setHeader(key, value));
 
-    googleResponse.send(hapiResponse.rawPayload);
+    googleResponse
+        .status(hapiResponse.statusCode)
+        .send(hapiResponse.rawPayload);
 }
 
 export interface GoogleFunctionsHttpRequest {
@@ -154,7 +154,7 @@ export interface GoogleFunctionsHttpResponse {
 
     local: any;
 
-    status(code: number): void;
+    status(code: number): GoogleFunctionsHttpResponse;
 
     setHeader(key: string, value: string): void;
 
